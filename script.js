@@ -223,29 +223,6 @@ document.querySelectorAll(".card").forEach((card) => {
   });
 });
 
-const buttons = document.querySelectorAll(".filter button");
-
-const cards = document.querySelectorAll(".project-grid .card");
-
-buttons.forEach((btn) => {
-  btn.onclick = () => {
-    buttons.forEach((b) => b.classList.remove("active"));
-
-    btn.classList.add("active");
-
-    let filter = btn.dataset.filter;
-
-    cards.forEach((card) => {
-      if (filter === "all") {
-        card.style.display = "block";
-      } else {
-        card.style.display =
-          card.dataset.category === filter ? "block" : "none";
-      }
-    });
-  };
-});
-
 /* ==========================
    EMAILJS
 ========================== */
