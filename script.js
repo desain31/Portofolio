@@ -340,3 +340,4 @@ closeAI.onclick=()=>{
     aiBox.style.display="none";
 
 }
+
