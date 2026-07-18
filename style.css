@@ -106,16 +106,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-#themeToggle {
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  background: #38bdf8;
-  color: white;
-}
-
 .light-mode {
   background: #f5f5f5;
   color: #222;
@@ -1001,6 +991,36 @@ box-shadow:0 0 0 0 transparent;
 }
 
 /* ===========================
+   AI DARK MODE
+=========================== */
+
+.light-mode #aiBox{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+}
+
+.light-mode .ai-header{
+    background:#0ea5e9;
+    color:#ffffff;
+}
+
+.light-mode .ai-body{
+    color:#111827;
+}
+
+.light-mode .ai-menu button{
+    background:#f3f4f6;
+    color:#111827;
+    border:1px solid #d1d5db;
+}
+
+.light-mode .ai-menu button:hover{
+    background:#0ea5e9;
+    color:#ffffff;
+}
+
+
+/* ===========================
    RESPONSIVE
 =========================== */
 
@@ -1105,15 +1125,6 @@ box-shadow:0 0 0 0 transparent;
     gap: 15px;
   }
 
-  #themeToggle,
-.menu{
-    width:50px;
-    height:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-}
 
   .btn,
   .btn2 {
@@ -1224,6 +1235,16 @@ box-shadow:0 0 0 0 transparent;
     padding:13px;
     font-size:15px;
   }
+
+  #aiBtn{
+    width:60px;
+    height:60px;
+    font-size:28px;
+}
+
+#aiBox{
+    width:280px;
+}
 }
 
 @media (max-width: 768px) {
@@ -1347,15 +1368,6 @@ box-shadow:0 0 0 0 transparent;
     padding: 20px;
   }
 
-  #themeToggle,
-.menu{
-    width:50px;
-    height:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-} 
 
   .contact-container {
     grid-template-columns: 1fr;
@@ -1655,4 +1667,15 @@ box-shadow:0 0 0 0 transparent;
     padding:12px;
     font-size:14px;
   }
+
+  #aiBtn{
+    width:55px;
+    height:55px;
+    font-size:24px;
+}
+
+#aiBox{
+    width:260px;
+    bottom:70px;
+}
 }

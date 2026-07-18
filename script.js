@@ -197,18 +197,31 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const themeBtn = document.getElementById("themeToggle");
+const themeAI = document.getElementById("themeAI");
 
-themeBtn.onclick = () => {
-  document.body.classList.toggle("light-mode");
+function updateThemeButton(){
 
-  if (document.body.classList.contains("light-mode")) {
-    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-  } else {
-    themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-  }
+    if(document.body.classList.contains("light-mode")){
+
+        themeAI.innerHTML="🌞 Light Mode";
+
+    }else{
+
+        themeAI.innerHTML="🌙 Dark Mode";
+
+    }
+
+}
+
+themeAI.onclick=()=>{
+
+    document.body.classList.toggle("light-mode");
+
+    updateThemeButton();
+
 };
 
+updateThemeButton();
 /* ==========================
    HOVER EFFECT PROJECT
 ========================== */
@@ -307,13 +320,6 @@ filterButtons.forEach((button) => {
       }
     });
   });
-});
-
-const menu = document.querySelector(".menu");
-const nav = document.querySelector("nav");
-
-menu.addEventListener("click", () => {
-  nav.classList.toggle("active");
 });
 
 /* ===========================
