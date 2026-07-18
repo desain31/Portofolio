@@ -72,7 +72,7 @@ header {
   align-items: center;
   background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(15px);
-  z-index: 1000;
+  z-index: 99999;
 }
 
 .logo {
@@ -857,6 +857,150 @@ button.loading {
 }
 
 /* ===========================
+   AI ASSISTANT
+=========================== */
+
+#aiAssistant{
+    position:fixed;
+    left:25px;
+    bottom:25px;
+    z-index:99999;
+}
+
+/* Tombol */
+
+#aiToggle{
+    width:65px;
+    height:65px;
+    border:none;
+    border-radius:50%;
+    background:#38bdf8;
+    color:#fff;
+    font-size:32px;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+#aiToggle:hover{
+    transform:scale(1.1);
+}
+
+/* Efek denyut */
+
+#aiToggle{
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(56,189,248,.7);
+}
+
+70%{
+box-shadow:0 0 0 18px transparent;
+}
+
+100%{
+box-shadow:0 0 0 0 transparent;
+}
+
+}
+
+/* Chat */
+
+#aiBox{
+
+    position:absolute;
+
+    bottom:80px;
+
+    left:0;
+
+    width:300px;
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    display:none;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+.ai-header{
+
+    background:#38bdf8;
+
+    color:#fff;
+
+    padding:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+#closeAI{
+
+    cursor:pointer;
+
+    font-size:22px;
+
+}
+
+.ai-body{
+
+    padding:18px;
+
+    line-height:1.7;
+
+}
+
+.ai-menu{
+
+    padding:15px;
+
+    display:grid;
+
+    gap:10px;
+
+}
+
+.ai-menu button{
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:#334155;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ai-menu button:hover{
+
+    background:#38bdf8;
+
+}
+
+/* ===========================
    RESPONSIVE
 =========================== */
 
@@ -961,13 +1105,15 @@ button.loading {
     gap: 15px;
   }
 
-  .menu,
-  #themeToggle {
-    position: relative;
-    z-index: 99999;
-    cursor: pointer;
-    touch-action: manipulation;
-  }
+  #themeToggle,
+.menu{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
 
   .btn,
   .btn2 {
@@ -1029,6 +1175,54 @@ button.loading {
 
   footer {
     padding: 35px 20px;
+  }
+
+   #aiAssistant{
+    left:20px;
+    bottom:20px;
+  }
+
+  /* Tombol AI */
+
+  #aiToggle{
+    width:60px;
+    height:60px;
+    font-size:30px;
+  }
+
+  /* Kotak Chat */
+
+  #aiBox{
+    left:0;
+    bottom:75px;
+    width:320px;
+    border-radius:16px;
+  }
+
+  .ai-header{
+    padding:15px 18px;
+    font-size:17px;
+  }
+
+  #closeAI{
+    font-size:24px;
+  }
+
+  .ai-body{
+    padding:18px;
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .ai-menu{
+    padding:18px;
+    gap:10px;
+  }
+
+  .ai-menu button{
+    width:100%;
+    padding:13px;
+    font-size:15px;
   }
 }
 
@@ -1153,13 +1347,15 @@ button.loading {
     padding: 20px;
   }
 
-  .menu,
-  #themeToggle {
-    position: relative;
-    z-index: 99999;
-    cursor: pointer;
-    touch-action: manipulation;
-  }
+  #themeToggle,
+.menu{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+} 
 
   .contact-container {
     grid-template-columns: 1fr;
@@ -1174,11 +1370,6 @@ button.loading {
     margin-top: 15px;
 
     justify-content: center;
-  }
-
-  #themeToggle {
-    width: 40px;
-    height: 40px;
   }
 
   section {
@@ -1414,5 +1605,54 @@ button.loading {
     width: auto;
     padding: 14px 18px;
     font-size: 14px;
+  }
+
+  #aiAssistant{
+    left:15px;
+    bottom:15px;
+  }
+
+  /* Tombol AI */
+
+  #aiToggle{
+    width:55px;
+    height:55px;
+    font-size:28px;
+  }
+
+  /* Kotak Chat */
+
+  #aiBox{
+    left:0;
+    bottom:70px;
+    width:calc(100vw - 30px);
+    max-width:330px;
+    border-radius:15px;
+  }
+
+  .ai-header{
+    padding:14px 16px;
+    font-size:16px;
+  }
+
+  #closeAI{
+    font-size:24px;
+  }
+
+  .ai-body{
+    padding:15px;
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .ai-menu{
+    padding:15px;
+    gap:8px;
+  }
+
+  .ai-menu button{
+    width:100%;
+    padding:12px;
+    font-size:14px;
   }
 }

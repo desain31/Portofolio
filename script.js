@@ -315,3 +315,28 @@ const nav = document.querySelector("nav");
 menu.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+
+/* ===========================
+   AI ASSISTANT
+=========================== */
+
+const aiToggle=document.getElementById("aiToggle");
+
+const aiBox=document.getElementById("aiBox");
+
+const closeAI=document.getElementById("closeAI");
+
+aiToggle.onclick=()=>{
+
+    aiBox.style.display=
+    aiBox.style.display==="block"
+    ?"none"
+    :"block";
+
+}
+
+closeAI.onclick=()=>{
+
+    aiBox.style.display="none";
+
+}
