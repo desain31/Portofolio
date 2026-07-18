@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.opacity = "0";
     loader.style.visibility = "hidden";
-  }, 1000);
+  }, 2200);
 });
 
 /* ==========================
@@ -321,6 +321,7 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
 
 /* ===========================
    AI ASSISTANT
