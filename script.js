@@ -306,7 +306,7 @@ form.addEventListener("submit", function (e) {
 ========================== */
 
 const filterButtons = document.querySelectorAll(".filter button");
-const projectCards = document.querySelectorAll(".project-grid .card");
+const projectCards = document.querySelectorAll(".project-card");
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
